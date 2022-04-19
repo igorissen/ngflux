@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/poke-api",
+  "sourceRoot": "libs/poke-api/src",
+  "prefix": "ngflux",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/poke-api"],
+      "options": {
+        "jestConfig": "libs/poke-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/poke-api/src/**/*.ts",
+          "libs/poke-api/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
