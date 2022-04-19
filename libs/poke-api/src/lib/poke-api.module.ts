@@ -5,8 +5,8 @@ import {
   Optional,
   SkipSelf,
 } from '@angular/core';
-import { NgxPokeApiOptions } from './types';
-import { NgxPokeApiConfiguration } from './models';
+import { PokeApiOptions } from './types';
+import { PokeApiConfiguration } from './models/poke-api-configuration';
 
 @NgModule({
   imports: [HttpClientModule],
@@ -21,14 +21,14 @@ export class NgxPokeApiModule {
   }
 
   static forRoot(
-    options?: NgxPokeApiOptions
+    options?: PokeApiOptions
   ): ModuleWithProviders<NgxPokeApiModule> {
     return {
       ngModule: NgxPokeApiModule,
       providers: [
         {
-          provide: NgxPokeApiConfiguration,
-          useValue: new NgxPokeApiConfiguration(options),
+          provide: PokeApiConfiguration,
+          useValue: new PokeApiConfiguration(options),
         },
       ],
     };

@@ -1,10 +1,10 @@
-import { NgxPokeApiOptions } from '../types';
+import { PokeApiOptions } from '../types';
 
-export class NgxPokeApiConfiguration {
+export class PokeApiConfiguration {
   baseUrl: string;
   version: string;
 
-  constructor(options?: NgxPokeApiOptions) {
+  constructor(options?: PokeApiOptions) {
     this.baseUrl = options?.baseUrl ?? 'https://pokeapi.co/api';
     this.version = options?.version ?? 'v2';
   }
