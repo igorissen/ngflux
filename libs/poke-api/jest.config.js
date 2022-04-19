@@ -18,4 +18,5 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
+  testPathIgnorePatterns: ['./src/index.ts', './src/lib/poke-api.module.ts'],
 };
